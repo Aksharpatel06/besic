@@ -72,20 +72,38 @@ class MyApp extends StatelessWidget {
         child: Scaffold(
           appBar: AppBar(
             centerTitle: true,
-            backgroundColor: Colors.amber,
-            title: const Text('flutter app',style: TextStyle(
+            backgroundColor: Colors.redAccent,
+            title: const Text('My RNW',style: TextStyle(
               color: Colors.white,
             ),),
-            leading: Icon(Icons.menu,color: Colors.white,),
           ),
-          body: const Center(
-            child: Text('Red & White',style: TextStyle(
-              color: Colors.red,
-              fontSize: 45,
-              decoration: TextDecoration.underline,
-              decorationStyle: TextDecorationStyle.double,
-              decorationColor: Colors.yellow,
-            ),),
+          body:const Center(
+            child: Text.rich(
+              TextSpan(
+                children: [
+                  TextSpan(text: 'Red & White\n',style:TextStyle(
+                    color: Colors.redAccent,
+                    fontSize: 60,
+                    fontWeight: FontWeight.w700,
+                    decoration: TextDecoration.underline,
+                    letterSpacing: 2,
+
+                  )),
+                  TextSpan(text: '     Multimedia Education\n',style: TextStyle(
+                    color: Colors.redAccent,
+                    fontSize: 28,
+                    fontWeight: FontWeight.w600,
+                  ),),
+
+                  TextSpan(text: '     Shapping "\skills\ for "\scaling\" higher...!!!',style:TextStyle(
+                    color: Colors.redAccent,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w500,
+                  ),),
+                ]
+
+              ),
+            ),
           ),
         ),
       ),
